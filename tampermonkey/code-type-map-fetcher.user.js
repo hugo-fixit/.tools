@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         code-type-map-fetcher
 // @namespace    https://github.com/hugo-fixit/.tools
-// @version      0.1
+// @version      0.2
 // @description  Get code-type-map from the list of Chroma highlighting languages
 // @author       Lruihao (https://lruihao.cn)
 // @match        https://gohugo.io/content-management/syntax-highlighting/
@@ -27,11 +27,11 @@
         if (code.includes(', ')) {
             const codeSplit = code.split(', ');
             for (const c of codeSplit) {
-                codeTypeMap[`language-${c}`] = type;
+                codeTypeMap[c] = type;
             }
             continue;
         }
-        codeTypeMap[`language-${code}`] = type;
+        codeTypeMap[code] = type;
     }
 
     // Print and cope to _maps/_code-type.scss
