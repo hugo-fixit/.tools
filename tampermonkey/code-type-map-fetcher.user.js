@@ -34,6 +34,6 @@
         codeTypeMap[code] = type;
     }
 
-    // Print and cope to _maps/_code-type.scss
+    // Print and copy to _code-type.scss
     console.log(JSON.stringify(codeTypeMap));
 })();
